@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "la-mia-pizzeria-razor-layout", "la-mia-pizzeria-razor-layout\la-mia-pizzeria-razor-layout.csproj", "{6698A256-D8C5-4008-AE63-E67D607445AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Razor", "Razor\Razor.csproj", "{DDFE0101-B068-49DB-A8E4-12FA47C1F8B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6698A256-D8C5-4008-AE63-E67D607445AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6698A256-D8C5-4008-AE63-E67D607445AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6698A256-D8C5-4008-AE63-E67D607445AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDFE0101-B068-49DB-A8E4-12FA47C1F8B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDFE0101-B068-49DB-A8E4-12FA47C1F8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDFE0101-B068-49DB-A8E4-12FA47C1F8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDFE0101-B068-49DB-A8E4-12FA47C1F8B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

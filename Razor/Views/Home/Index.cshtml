@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">FUNZIONI RAZOR</h1>
+    @{
+        string NomeCognome()
+        {
+            var name = "Leonardo";
+            var surname = "Filesi";
+            return name + surname;
+        }
+    }
+    <span><strong>Questa è la scheda degli esercizi di @NomeCognome</strong></span>
+</div>
+
+<div>
+    <span><strong>Creare una funzione che stampi la sonna di numeri che vanno da 1 a n</strong></span>
+    @{
+        int CalcolaSomma(int n)
+        {
+            int somma = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                somma += i;
+            }
+            return somma;
+        }
+    }
+    <span>La somma di tutti i numeri tra 1 e n è @CalcolaSomma</span>
+</div>
+
+<div>
+    <span><strong>Creare una List<int> di 20 numeri interi generati random (da 1 a 90, 1 e 90 inclusi), mostrare in pagina quelli compresi tra 20 e 70</strong></span>
+    @{
+        List<int> interi = new List<int>();
+        Random random = new Random();
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                int numeroRandom = random.Next(1, 91);
+                interi.Add(numeroRandom);
+            }
+            @foreach (int interoDaStampare in interi)
+            {
+                @if (interoDaStampare > 20 && interoDaStampare < 70)
+                {
+                    <span>@interoDaStampare</span>
+                }
+            }
+        }
+    }
+    <span>La somma di tutti i numeri tra 1 e n è @CalcolaSomma</span>
+</div>
+
+<div>
+    <p><strong>Stampare in pagina data attuale (con DateTime) in formato dd/MM/yyyy HH:mm:ss</strong></p>
+    @{
+        DateTime dataOggi = DateTime.Now;
+    }
+    <p>Oggi è il @dataOggi.ToString("dd/MM/yyyy") e sono le @dataOggi.ToString("HH:mm:ss");</p>
+</div>
+
+<div>
+    @{
+        DateTime oggi = DateTime.Today;
+    }
+    <span>Oggi è @oggi.ToString("dddd")</span>
+
+    @{
+        DateTime unaSettFa = oggi.AddDays(-7);
+    }
+    <span>Una settimana fa era @unaSettFa.ToString("dd/MM/yyyy")</span>
+
+    @{
+        DateTime traUnAnno = DateTime.Today.AddYears(1);
+    }
+    <span>Tra un anno darà un @traUnAnno.ToString("dddd");</span>
+
+</div>
